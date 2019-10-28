@@ -1,49 +1,55 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
+import { Menu, Icon } from 'antd';
+
+const { SubMenu } = Menu;
 
 export class NavMenu extends Component {
-  static displayName = NavMenu.name;
+  state = {
+    current: 'home',
+  };
 
-  constructor (props) {
-    super(props);
-
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: true
-    };
-  }
-
-  toggleNavbar () {
+  handleClick = e => {
     this.setState({
-      collapsed: !this.state.collapsed
+      current: e.key,
     });
-  }
+  };
 
-  render () {
+  render() {
     return (
-      <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-          <Container>
-            <NavbarBrand tag={Link} to="/">MiniCarsales</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-              <ul className="navbar-nav flex-grow">
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-                </NavItem>
-              </ul>
-            </Collapse>
-          </Container>
-        </Navbar>
-      </header>
-    );
-  }
+    <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+      <Menu.Item key="home">
+      <Icon type="home" />
+      <span>Home</span>
+      <Link to="/" />
+      </Menu.Item>
+      <SubMenu
+    title={
+        <span className="submenu-title-wrapper">
+        <Icon type="setting" />
+        Create Vehicle
+        </span>
+      }
+      >
+      <Menu.ItemGroup title="Vehicles">
+      <Menu.Item key="setting:1">
+      <Icon type="car" />
+      <span>Create Cars</span>
+      <Link to="/Cars" />
+      </Menu.Item>
+      <Menu.Item disabled key="setting:2">
+      <Icon type="lock" />
+      <span>Create Boat</span>
+      <Link to="/boat" />
+      </Menu.Item>
+      <Menu.Item disabled key="setting:3">
+      <Icon type="lock" />
+      <span>Create Bike</span>
+      <Link to="/bike" />
+      </Menu.Item>
+      </Menu.ItemGroup>
+      </SubMenu>
+      </Menu>
+  );
+}
 }
