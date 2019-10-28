@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCarsales", "MiniCarsales\MiniCarsales.csproj", "{4A58D574-4723-47D1-B2FF-FB74ED8191CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCarsales.Tests", "..\MiniCarsales.Tests\MiniCarsales.Tests.csproj", "{5566A1B1-E090-4915-A675-DC078F45D86C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCarsales.Test", "MiniCarsales.Test\MiniCarsales.Test.csproj", "{0DB92188-233B-49BC-BD75-1B43462BA3BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4A58D574-4723-47D1-B2FF-FB74ED8191CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A58D574-4723-47D1-B2FF-FB74ED8191CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A58D574-4723-47D1-B2FF-FB74ED8191CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5566A1B1-E090-4915-A675-DC078F45D86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5566A1B1-E090-4915-A675-DC078F45D86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5566A1B1-E090-4915-A675-DC078F45D86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5566A1B1-E090-4915-A675-DC078F45D86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB92188-233B-49BC-BD75-1B43462BA3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB92188-233B-49BC-BD75-1B43462BA3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB92188-233B-49BC-BD75-1B43462BA3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB92188-233B-49BC-BD75-1B43462BA3BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
